@@ -1,0 +1,43 @@
+mongod --dbpath /path/to/your/db
+
+{
+    "_id": "component_id",
+    "name": "Component Name",
+    "type": "Component Type",
+    "installation_date": "YYYY-MM-DD",
+    "specifications": {
+        "manufacturer": "Manufacturer Name",
+        "model": "Model Number",
+        "details": "Other relevant details"
+    }
+}
+
+{
+    "_id": "reading_id",
+    "component_id": "component_id",
+    "timestamp": "YYYY-MM-DDTHH:MM:SSZ",
+    "readings": {
+        "temperature": 75.5,
+        "vibration": 0.02,
+        "pressure": 101.3,
+        ...
+    }
+}
+
+{
+    "_id": "log_id",
+    "component_id": "component_id",
+    "timestamp": "YYYY-MM-DDTHH:MM:SSZ",
+    "action": "Maintenance Action",
+    "details": "Detailed description of the maintenance action",
+    "cost": 500
+}
+
+{
+    "_id": "prediction_id",
+    "component_id": "component_id",
+    "timestamp": "YYYY-MM-DDTHH:MM:SSZ",
+    "predicted_rul": 100,
+    "model_version": "v1.0"
+}
+
